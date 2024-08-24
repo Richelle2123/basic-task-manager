@@ -22,23 +22,23 @@ const Register = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-                <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
-                <form onSubmit={handleRegister} className="space-y-4">
+        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-yellow-300 via-orange-300 to-red-300 font-sans">
+            <div className="bg-white bg-opacity-80 p-10 rounded-xl shadow-xl max-w-md w-full">
+                <h2 className="text-3xl font-extrabold mb-6 text-center text-gray-800">Register</h2>
+                <form onSubmit={handleRegister} className="space-y-6">
                     <input
                         type="email"
                         placeholder="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
                     />
                     <input
                         type="password"
                         placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
                     />
                     {error && (
                         <div className="bg-red-100 text-red-700 p-2 rounded-lg">
@@ -47,13 +47,19 @@ const Register = () => {
                     )}
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+                        className="w-full bg-gradient-to-r from-red-500 to-pink-500 text-white py-3 rounded-full shadow-lg hover:from-red-600 hover:to-pink-600 transform hover:scale-105 transition-transform duration-200"
                     >
                         Register
                     </button>
                 </form>
-                <a href='/login'>login</a>
-
+                <div className="flex justify-center mt-4">
+                    <a
+                        href="/login"
+                        className="text-sm text-blue-600 hover:underline"
+                    >
+                        Already have an account? Login
+                    </a>
+                </div>
             </div>
         </div>
     );
