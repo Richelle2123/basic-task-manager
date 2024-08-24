@@ -19,7 +19,6 @@ This project is a simple task management application built with React, Firebase,
 - **Firebase**: For authentication and Firestore database.
 - **Tailwind CSS**: A utility-first CSS framework for styling.
 - **React Router**: For routing between different pages.
-- **Vite**: A fast build tool for modern web projects.
 
 ## Getting Started
 
