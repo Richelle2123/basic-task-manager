@@ -27,6 +27,7 @@ const AddTask = () => {
             setTitle('');
             setDescription('');
             setDueDate('');
+            navigate('/');
         } catch (error) {
             console.error('Error adding task:', error);
             setError('Failed to add task. Please try again later.');
